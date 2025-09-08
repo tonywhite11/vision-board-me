@@ -1,0 +1,63 @@
+/* Mobile-first improvements for Vision Board Maker */
+
+/* Prevent viewport bouncing on mobile */
+html, body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+/* Better scrolling for panels on mobile */
+.mobile-panel {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobile-panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure proper touch handling */
+.touch-action-none {
+  touch-action: none;
+}
+
+/* Prevent text selection on interactive elements */
+.user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Safe area insets for devices with notches */
+@supports (padding: max(0px)) {
+  .safe-area-bottom {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+  
+  .safe-area-top {
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
+}

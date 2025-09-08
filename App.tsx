@@ -123,8 +123,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="w-screen h-screen bg-gray-900 text-white relative">
-      <div className="absolute top-5 left-5 z-20 bg-black/30 p-2 rounded-lg">
+    <main className="w-screen h-screen bg-gray-900 text-white relative overflow-hidden">
+      <div className="absolute top-5 left-5 z-20 bg-black/30 p-2 rounded-lg safe-area-top">
         <h1 className="text-xl font-bold">Vision Board Maker</h1>
         <p className="text-sm text-gray-300">Manifest your goals visually</p>
       </div>
