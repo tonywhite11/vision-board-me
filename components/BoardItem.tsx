@@ -187,8 +187,18 @@ const BoardItemComponent: React.FC<BoardItemProps> = ({ item, isSelected, onSele
             onBlur={handleTextBlur}
             onInput={handleTextChange}
             className={`w-full h-full p-2 text-2xl font-semibold break-words ${isEditing ? 'focus:outline-none' : ''}`}
-            style={{ color: 'white', cursor: isEditing ? 'text' : 'inherit' }}
+            style={{ 
+              color: 'white', 
+              cursor: isEditing ? 'text' : 'inherit',
+              direction: 'ltr',
+              textAlign: 'left',
+              unicodeBidi: 'normal',
+              writingMode: 'horizontal-tb',
+              transform: 'none',
+              backfaceVisibility: 'visible'
+            }}
             suppressContentEditableWarning={true}
+            dir="ltr"
           >
             {item.content}
           </div>
