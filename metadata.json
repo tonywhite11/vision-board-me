@@ -1,0 +1,5 @@
+{
+  "name": "Vision Board Maker",
+  "description": "An interactive, infinite canvas where users manifest goals by generating, editing, and arranging images using the Gemini API. Bring your dreams to life with AI-powered visual creation and editing.",
+  "requestFramePermissions": []
+}
